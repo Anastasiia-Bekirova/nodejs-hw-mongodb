@@ -1,6 +1,6 @@
 import Joi from "joi";
 
-import { emailRegex } from "../constants/users";
+import { emailRegex } from "../constants/users.js";
 
 export const authRegisterSchema = Joi.object({
     name: Joi.string().required(),
