@@ -64,7 +64,7 @@ export const requestResetToken = async (email) => {
     name: user.name,
     link: `${getEnvVar('APP_DOMAIN')}/reset-pwd?token=${resetToken}`,
   });
-
+  console.log(resetToken);
   await sendEmail({
     from: getEnvVar('SMTP_FROM'),
     to: email,
