@@ -11,12 +11,20 @@ tags:
     description: Operations about contacts.
 servers:
   - url: http://localhost:3000
-  - url: https://contacts.com/api/v1
+  - url: https://contacts-app-0bg7.onrender.com/api-docs
 paths:
   /contacts:
     get:
       $ref: ../swagger/paths/contacts/get.yaml
-  # тут будуть посилання на ендпоінти
+    post:
+      $ref: ../swagger/paths/contacts/post.yaml
+  /contacts/{id}:
+    get:
+      $ref: ../swagger/paths/contacts/{id}/get.yaml
+    patch:
+      $ref: ../swagger/paths/contacts/{id}/patch.yaml
+    delete:
+      $ref: ../swagger/paths/contacts/{id}/delete.yaml
 components:
   securitySchemes:
     bearerAuth:
